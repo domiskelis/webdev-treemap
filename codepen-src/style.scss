@@ -1,0 +1,82 @@
+@import url('https://fonts.cdnfonts.com/css/steamflix-grotesk');
+
+
+* {
+  font-family: 'Steamflix Grotesk', sans-serif;
+}
+
+body { background-color: rgba(221, 210, 216, 0.8); }
+#body {
+  margin: 0 auto;
+  text-align: center;
+  .graph-box {
+    display: grid;
+    grid-template-areas: "legend-title graph"
+      "legend graph";
+    justify-content: center;
+    #chart { grid-area: graph; }
+    #legend-title {
+      padding: 10px;
+      grid-area: legend-title;
+      font-size: 30px;
+      height: 40px;
+      text-align: left;
+      align-self: end;
+      opacity: 0;}
+    #legend {
+      padding-left: 10px;
+      grid-area: legend;
+      align-self: start; }
+    #tooltip {
+      background-color: rgba(255,255,255,0.8);
+      text-align: left;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  .toggles-container {
+    width: 50vw;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 1fr 6fr;
+    grid-template-areas: "toggle-label toggle-label toggle-label none palette-label"
+      "kickstarter-btn movies-btn games-btn  or palette-btn";
+    #button-label {
+      position: absolute;
+      z-index: 10;
+      opacity: 0;
+      background-color: rgba(255,255,255,0.6);
+      padding: 5px;
+      border-radius: 20px;
+    }
+    #data-button-label { grid-area: toggle-label; }
+    #palette-button-label { grid-area: palette-label; }
+    #or-text { grid-area: or; place-self: center; }
+    #kickstarter-button {
+      grid-area: kickstarter-btn;
+      place-self: end;}
+    #movies-button {
+      grid-area: movies-btn;
+      place-self: center; }
+    #games-button {
+      grid-area: games-btn;
+      place-self: start;}
+    #palette-button {
+      grid-area: palette-btn;
+      place-self: center;}
+    .button {
+      width: 2em;
+      height: 2em;
+      background-color: rgba(255,255,255,0.8);
+      font-size: 30px;
+      border-radius: 90px;
+      transition-duration: 0.8s;
+      i { margin: auto; transition-duration: 0.8s; }
+    }
+    .button:hover {
+      background-color: rgba(0,0,0,0.4);
+      i { font-size: 35px; }
+    }
+    margin: 2vw auto;
+  }
+}

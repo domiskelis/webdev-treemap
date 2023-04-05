@@ -1,0 +1,101 @@
+@import url("https://fonts.cdnfonts.com/css/steamflix-grotesk");
+* {
+  font-family: "Steamflix Grotesk", sans-serif;
+}
+
+body {
+  background-color: rgba(221, 210, 216, 0.8);
+}
+
+#body {
+  margin: 0 auto;
+  text-align: center;
+}
+#body .graph-box {
+  display: grid;
+  grid-template-areas: "legend-title graph" "legend graph";
+  justify-content: center;
+}
+#body .graph-box #chart {
+  grid-area: graph;
+}
+#body .graph-box #legend-title {
+  padding: 10px;
+  grid-area: legend-title;
+  font-size: 30px;
+  height: 40px;
+  text-align: left;
+  align-self: end;
+  opacity: 0;
+}
+#body .graph-box #legend {
+  padding-left: 10px;
+  grid-area: legend;
+  align-self: start;
+}
+#body .graph-box #tooltip {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+}
+#body .toggles-container {
+  width: 50vw;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 1fr 6fr;
+  grid-template-areas: "toggle-label toggle-label toggle-label none palette-label" "kickstarter-btn movies-btn games-btn  or palette-btn";
+  margin: 2vw auto;
+}
+#body .toggles-container #button-label {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5px;
+  border-radius: 20px;
+}
+#body .toggles-container #data-button-label {
+  grid-area: toggle-label;
+}
+#body .toggles-container #palette-button-label {
+  grid-area: palette-label;
+}
+#body .toggles-container #or-text {
+  grid-area: or;
+  place-self: center;
+}
+#body .toggles-container #kickstarter-button {
+  grid-area: kickstarter-btn;
+  place-self: end;
+}
+#body .toggles-container #movies-button {
+  grid-area: movies-btn;
+  place-self: center;
+}
+#body .toggles-container #games-button {
+  grid-area: games-btn;
+  place-self: start;
+}
+#body .toggles-container #palette-button {
+  grid-area: palette-btn;
+  place-self: center;
+}
+#body .toggles-container .button {
+  width: 2em;
+  height: 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  border-radius: 90px;
+  transition-duration: 0.8s;
+}
+#body .toggles-container .button i {
+  margin: auto;
+  transition-duration: 0.8s;
+}
+#body .toggles-container .button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#body .toggles-container .button:hover i {
+  font-size: 35px;
+}
