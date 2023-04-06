@@ -257,5 +257,3 @@ class Grapher extends React.Component {
 };
 
 ReactDOM.render(<Grapher/>,document.getElementById("body"));
-
-console.log(parseFloat("23749990"))

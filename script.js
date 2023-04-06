@@ -255,5 +255,3 @@ class Grapher extends React.Component {
 ;
 
 ReactDOM.render( /*#__PURE__*/React.createElement(Grapher, null), document.getElementById("body"));
-
-console.log(parseFloat("23749990"));
